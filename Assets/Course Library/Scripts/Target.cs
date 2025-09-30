@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    private GameManager gameManager;
     private Rigidbody rb;
 
     private float minSpeed = 12;
@@ -16,6 +17,8 @@ public class Target : MonoBehaviour
         rb.AddForce(RandomForce(), ForceMode.Impulse);
         rb.AddTorque(RandomTorque(), RandomTorque(), RandomTorque(), ForceMode.Impulse);
         transform.position = RandomSpawnPosition();
+
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -38,6 +41,7 @@ public class Target : MonoBehaviour
 
     private void OnMouseDown() {
         Destroy(gameObject);
+        gameManager.UpdateScore(5);
     }
 
     private void OnTriggerEnter(Collider other) {
