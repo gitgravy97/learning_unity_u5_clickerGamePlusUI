@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    public int pointValue;
     private GameManager gameManager;
     private Rigidbody rb;
 
@@ -10,6 +11,8 @@ public class Target : MonoBehaviour
     private float maxTorque = 10;
     private float xRange = 4;
     private float ySpawnPos = -6;
+
+    public ParticleSystem explosionParticle;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
@@ -41,7 +44,8 @@ public class Target : MonoBehaviour
 
     private void OnMouseDown() {
         Destroy(gameObject);
-        gameManager.UpdateScore(5);
+        Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+        gameManager.UpdateScore(pointValue);
     }
 
     private void OnTriggerEnter(Collider other) {
