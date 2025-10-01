@@ -649,6 +649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3086f16bf7431a97082819a4784f907a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DifficultyButton
+  difficulty: 2
   gameManager: {fileID: 1665608847}
 --- !u!114 &371422221
 MonoBehaviour:
@@ -1186,6 +1187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3086f16bf7431a97082819a4784f907a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DifficultyButton
+  difficulty: 1
   gameManager: {fileID: 1665608847}
 --- !u!114 &796976879
 MonoBehaviour:
@@ -1682,6 +1684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3086f16bf7431a97082819a4784f907a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DifficultyButton
+  difficulty: 3
   gameManager: {fileID: 1665608847}
 --- !u!114 &1421002833
 MonoBehaviour:
